@@ -38,7 +38,7 @@ function SearchMovie() {
       <div className="py-24">
         <form
           onSubmit={submitHandler}
-          className="flex justify-between w-1/2 mx-auto px-2 py-2 border rounded-xl  shadow-lg"
+          className="flex justify-between w-3/4 lg:w-1/2 mx-auto px-2 py-2 border rounded-xl  shadow-lg"
         >
           <input
             value={searchMovie}

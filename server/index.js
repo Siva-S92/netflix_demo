@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import databaseConnection from '../utils/database.js';
-import { userRouter } from '../routes/userRoute.js';
+import databaseConnection from './utils/database.js';
+import { userRouter } from './routes/userRoute.js';
 
 
 //config the env variables
@@ -10,7 +10,7 @@ dotenv.config();
 
 //server setup
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 8000;
 
 //using middlewares
 app.use(express.urlencoded({extended: true}));
@@ -38,5 +38,3 @@ app.use("/api/user", userRouter );
 app.listen(PORT, ()=> {
     console.log("server running on the PORT:", PORT)
 })
-
-export default app;

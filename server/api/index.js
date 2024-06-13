@@ -26,6 +26,7 @@ databaseConnection();
 
 
 //routes
+app.get('/', async (req, res) => res.send("Express on vercel with server.js"))
 app.use("/api/user", userRouter );
 
 

@@ -16,7 +16,7 @@ const PORT = 8000;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 const cors_options = {
-    origin: "*",
+    origin: process.env.CLIENT_URL,
     credentials: true,
 }
 // app.options("", cors(cors_options))

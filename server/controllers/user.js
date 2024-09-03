@@ -67,7 +67,7 @@ export const Login = async(req, res)=> {
         }
         const token_data = {id: user._id};
         const token = await jwt.sign(token_data, process.env.SECRET_KEY, {expiresIn: "1d"});
-        return res.status(200).cookie("token", token, {httpOnly: true}).json({
+        return res.status(200).cookie("token", token, {httpOnly: false}).json({
             message: "logged in Successfully",
             success: true,
             user: user,
